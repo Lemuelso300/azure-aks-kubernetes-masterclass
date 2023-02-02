@@ -1,4 +1,11 @@
 # Docker
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Azure subscription 1(cc26a802-b47a-429f-bc21-3a36585657d2)'
+    appType: 'webApp'
+    WebAppName: 'SI_Docker'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
 # Build a Docker image
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
